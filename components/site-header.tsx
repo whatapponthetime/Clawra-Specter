@@ -37,7 +37,7 @@ export function SiteHeader() {
                     </Link>
 
                     <Link
-                        href="https://github.com/whatapponthetime/CLAWD-HUNTER.git"
+                        href="https://github.com/whatapponthetime/Clawra-Specter.git"
                         target="_blank"
                         className="relative group outline-none"
                     >
@@ -47,7 +47,7 @@ export function SiteHeader() {
                     </Link>
 
                     <Link
-                        href="https://x.com/ClawdHnter"
+                        href="https://x.com/clawra28"
                         target="_blank"
                         className="relative group outline-none"
                     >

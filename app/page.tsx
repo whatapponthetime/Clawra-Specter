@@ -87,7 +87,7 @@ export default function LandingPage() {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
-            <Link href="https://github.com/whatapponthetime/CLAWD-HUNTER.git" target="_blank">
+            <Link href="https://github.com/whatapponthetime/Clawra-Specter.git" target="_blank">
               <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg px-8 h-14 rounded-xl border-primary/20 text-white hover:bg-primary/10 hover:text-white backdrop-blur-md">
                 View Documentation
               </Button>

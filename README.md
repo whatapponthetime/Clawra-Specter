@@ -1,6 +1,10 @@
+<p align="center">
+  <img src="public/banner.jpeg" alt="Clawra Specter Banner" width="100%" />
+</p>
+
 # CLAWRA SPECTER AI
 
-[![Twitter](https://img.shields.io/badge/Twitter-Profile-black?style=for-the-badge&logo=x)](https://x.com/ClawdHnter)
+[![Twitter](https://img.shields.io/badge/Twitter-Profile-black?style=for-the-badge&logo=x)](https://x.com/clawra28)
 ![Version](https://img.shields.io/badge/version-2.5.0-white?style=for-the-badge&logo=shield)
 ![Status](https://img.shields.io/badge/status-OPERATIONAL-white?style=for-the-badge)
 ![Security](https://img.shields.io/badge/security-MAXIMUM-white?style=for-the-badge)
@@ -70,8 +74,8 @@ Built with a **Deep Midnight / Spectral Cyan** aesthetic, it provides a cinemati
 
 1.  **Clone the Repository**
     ```bash
-    git clone https://github.com/whatapponthetime/CLAWD-HUNTER.git
-    cd CLAWD-HUNTER
+    git clone https://github.com/whatapponthetime/Clawra-Specter.git
+    cd Clawra-Specter
     ```
 
 2.  **Install Dependencies**
