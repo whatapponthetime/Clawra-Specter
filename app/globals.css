@@ -1,0 +1,256 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Base Colors - Deep Midnight / Obsidian */
+    --background: 240 30% 2%;
+    --foreground: 220 10% 98%;
+
+    /* Primary - Ghostly Cyan / Silver */
+    --primary: 187 82% 80%;
+    --primary-foreground: 240 30% 2%;
+
+    /* Secondary - Deep Indigo / Ghostly Blue */
+    --secondary: 240 25% 10%;
+    --secondary-foreground: 187 40% 90%;
+
+    /* Accent - Ethereal Cyan */
+    --accent: 187 82% 80%;
+    --accent-foreground: 240 30% 2%;
+
+    /* Muted - Faded Slate */
+    --muted: 240 10% 12%;
+    --muted-foreground: 240 5% 65%;
+
+    /* Cards & Popovers */
+    --card: 240 25% 4%;
+    --card-foreground: 220 10% 98%;
+
+    --popover: 240 25% 4%;
+    --popover-foreground: 220 10% 98%;
+
+    /* Destructive - Spectral Red */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders & Inputs */
+    --border: 240 15% 12%;
+    --input: 240 15% 12%;
+    --ring: 187 82% 80%;
+
+    --radius: 0.75rem;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    background-image:
+      radial-gradient(at 0% 0%, rgba(255, 255, 255, 0.03) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(200, 200, 200, 0.03) 0px, transparent 50%);
+    background-attachment: fixed;
+    color: hsl(var(--foreground));
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-cinzel), serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Glassmorphism Classes - Clean & Minimal */
+.glass-panel {
+  background: rgba(20, 20, 20, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.2),
+    inset 0 0 10px rgba(255, 255, 255, 0.02);
+  transition: all 0.3s ease;
+}
+
+.glass-panel:hover {
+  background: rgba(30, 30, 30, 0.5);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.3),
+    inset 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+/* Liquid Card Variant - Monochrome */
+.glass-liquid {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Glow Utilities - Ghostly Cyan */
+.text-glow {
+  text-shadow: 0 0 20px rgba(165, 243, 252, 0.3);
+}
+
+.border-glow {
+  box-shadow: inset 0 0 15px rgba(165, 243, 252, 0.1);
+}
+
+/* Custom Scrollbar - Monochrome */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Animation Utilities */
+@keyframes scan {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.animate-scan {
+  animation: scan 2s linear infinite;
+}
+
+/* Shine Effect - White */
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.05),
+      transparent);
+  transform: translateX(-100%);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* --- Advanced Animations for Clawra Specter Loading --- */
+
+/* 1. Matrix/Hex Digital Rain Background - Monochrome */
+.matrix-bg {
+  background-image:
+    linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .02) 25%, rgba(255, 255, 255, .02) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .02) 75%, rgba(255, 255, 255, .02) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .02) 25%, rgba(255, 255, 255, .02) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .02) 75%, rgba(255, 255, 255, .02) 76%, transparent 77%, transparent);
+  background-size: 50px 50px;
+  animation: matrix-move 20s linear infinite;
+}
+
+@keyframes matrix-move {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+/* 2. Sweeping Scanner Line - Spectral Cyan */
+.scanner-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(165, 243, 252, 0.6);
+  box-shadow: 0 0 15px rgba(165, 243, 252, 0.5), 0 0 30px rgba(165, 243, 252, 0.3);
+  animation: scan-vertical 2s ease-in-out infinite;
+  z-index: 10;
+}
+
+@keyframes scan-vertical {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+/* 3. Pulsing Radar Circle - White/Gray */
+.radar-pulse {
+  position: relative;
+}
+
+.radar-pulse::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid rgba(165, 243, 252, 0.2);
+  animation: radar-expand 2s infinite;
+}
+
+@keyframes radar-expand {
+  0% {
+    width: 0%;
+    height: 0%;
+    opacity: 1;
+  }
+
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
+}
